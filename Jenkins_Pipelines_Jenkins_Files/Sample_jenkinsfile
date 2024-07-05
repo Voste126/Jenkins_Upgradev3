@@ -11,11 +11,11 @@ pipeline {
             steps {
                 script {
                     // Set Git buffer size
-                    sh 'git config --global http.postBuffer 524288000'
+                    sh 'git config --global http.postBuffer 1048576000' // Increased buffer size to 1GB
                     
                     // Clone the Git repository's master branch
                     def gitRepoUrl = 'https://github.com/Voste126/Jenkins_Upgradev3.git'
-
+                
                     checkout([$class: 'GitSCM', 
                         branches: [[name: '*/master']], 
                         userRemoteConfigs: [[url: gitRepoUrl]], 
