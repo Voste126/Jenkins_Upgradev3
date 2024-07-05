@@ -16,6 +16,7 @@ pipeline {
                     git config --global http.lowSpeedLimit 0
                     git config --global http.lowSpeedTime 999999
                     git config --global http.maxRequests 1
+                    git config --global http.version HTTP/1.1
                     '''
                      // Increased buffer size to 1GB
                     
